@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<script type="text/javascript">
+  function checker() {
+var f1=parseInt(document.getElementsByName('f1')[0].value);
+var f2=parseInt(document.getElementsByName('f2')[0].value);
+var f3=parseInt(document.getElementsByName('f3')[0].value);
+var f4=parseInt(document.getElementsByName('f4')[0].value);
+var f5=parseInt(document.getElementsByName('f5')[0].value);
+var f6=parseInt(document.getElementsByName('f6')[0].value);
+var f7=parseInt(document.getElementsByName('f7')[0].value);
+var f8=parseInt(document.getElementsByName('f8')[0].value);
+var f9=parseInt(document.getElementsByName('f9')[0].value);
+var f10=parseInt(document.getElementsByName('f10')[0].value);
+var f11=parseInt(document.getElementsByName('f11')[0].value);
+var f12=parseInt(document.getElementsByName('f12')[0].value);
+
+if(isNaN(f1)||isNaN(f2) ||isNaN(f3)||isNaN(f4)||isNaN(f5)||isNaN(f6)||isNaN(f7)||isNaN(f8)||isNaN(f9)||isNaN(f10)||isNaN(f11)||isNaN(f12)){
+  alert("enter valid input");
+}
+else{
+
+  if((f1>0 && f1<=10) && (f2>0 && f2<=10) && (f4>0 && f4<=10) && (f5>0 && f5<=10) && (f6>0 && f6<=10) && (f7>0 && f7<=10) && (f8>0 && f8<=10) && (f9>0 && f9<=10) && (f10>0 && f10<=10) &&  (f11>0 && f11<=10) && (f12>0 && f12<=10))
+  {
+    document.getElementsByName("f1")[0].value = Math.round((Math.random()+f1-1)*10);
+    document.getElementsByName("f2")[0].value = Math.round((Math.random()+f2-1)*10);
+    document.getElementsByName("f4")[0].value = Math.round((Math.random()+f4-1)*10);
+    document.getElementsByName("f5")[0].value = Math.round((Math.random()+f5-1)*10);
+    document.getElementsByName("f6")[0].value = Math.round((Math.random()+f6-1)*10);
+    document.getElementsByName("f7")[0].value = Math.round((Math.random()+f7-1)*10);
+    document.getElementsByName("f8")[0].value = Math.round((Math.random()+f8-1)*10);
+    document.getElementsByName("f9")[0].value = Math.round((Math.random()+f9-1)*10);
+    document.getElementsByName("f10")[0].value = Math.round((Math.random()+f10-1)*10);
+    document.getElementsByName("f11")[0].value = Math.round((Math.random()+f11-1)*10);
+    document.getElementsByName("f12")[0].value = Math.round((Math.random()+f12-1)*10);
+  }
+  else
+  {
+     alert("enter between 1 to 10");
+  }
+}
+
+}
+</script>
+<body>
+
+<div class="container">
+       <table class="table table-striped">
+          <tbody>
+             <tr>
+                <td colspan="1">
+                   <form class="well form-horizontal" action="\predict" method="post">
+                      <fieldset>
+                      
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Problem-solving skills</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="addressLine1" name="f1" placeholder="Problem-solving skills" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         
+                         <div class="form-group">
+                            <label class="col-md-4 control-label"> Programming Skills</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="city" name="f2" placeholder=" Programming Skills" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Coding</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="state" name="f3" placeholder="Data Structures and Algorithms skills" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Design and Analysis of Algorithms</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><input id="phoneNumber" name="f4" placeholder="Design and Analysis of Algorithms" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Computer Networks</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="postcode" name="f5" placeholder="Computer Networks" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Mathematics</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><input id="phoneNumber" name="f6" placeholder="(Probability,Statistics)" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                          
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Computer Architecture</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="addressLine1" name="f7" placeholder="Computer Architecture" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                        
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Submit </label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                <button type="submit" class="btn btn-primary" onclick="checker()">submit</button>
+                              </div>
+                            </div>
+                         </div>
+                      </fieldset>
+                   
+                </td>
+                <td colspan="1">
+                  
+                      <fieldset>
+                      	<div class="form-group">
+                            <label class="col-md-4 control-label">Software Architecture</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="addressLine2" name="f8" placeholder="Operating Systems" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+
+
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Operating Systems</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="addressLine2" name="f9" placeholder="Operating Systems" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         
+                         <div class="form-group">
+                            <label class="col-md-4 control-label"> Database knowledge</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="city" name="f10" placeholder="Relational Database knowledge" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Electronics knowledge</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="state" name="f11" placeholder="Electronics knowledge" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Communication skills</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="state" name="f12" placeholder="Communication skills" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Logical Skills</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="state" name="f13" placeholder="Logical Skills" class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                         </div>   
+                         <div class="form-group">
+                            <label class="col-md-4 control-label">Interested Subjects</label>
+                            <div class="col-md-8 inputGroupContainer">
+                               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                               	<select name="f14" id="Destination" required="required">
+                                <option value="i1">IOT</option>
+                                <option value="i2">Management</option>
+                                <option value="i3">Software Engineering</option>
+                                <option value="i4">cloud computing</option>
+                                <option value="i5">data engineering</option>
+                                <option value="i6">hacking</option>
+                                <option value="i7">networks</option>
+                                <option value="i8">parallel computing</option>
+                                <option value="i9">programming</option>
+                            </select></div>
+                            </div>
+                         </div>   
+                                     
+                      </fieldset>
+                   </form>
+                </td>
+             </tr>
+          </tbody>
+       </table>
+       <h3>{{output}}</h3>
+    </div>
+  </body>
+  </html>
